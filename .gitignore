@@ -1,0 +1,33 @@
+# OS / editor
+.DS_Store
+.claude/
+*.log
+
+# Web prototype (see web-prototype/.gitignore too)
+web-prototype/node_modules/
+web-prototype/dist/
+web-prototype/release/
+web-prototype/.smoke/
+
+# Unity (for the upcoming unity/ project)
+unity/[Ll]ibrary/
+unity/[Tt]emp/
+unity/[Oo]bj/
+unity/[Bb]uild/
+unity/[Bb]uilds/
+unity/[Ll]ogs/
+unity/[Uu]ser[Ss]ettings/
+unity/[Mm]emoryCaptures/
+unity/*.csproj
+unity/*.sln
+unity/*.suo
+unity/*.user
+unity/*.pidb
+unity/*.booproj
+unity/*.unityproj
+unity/.vs/
+unity/.vscode/
+unity/.idea/
+unity/*.apk
+unity/*.aab
+unity/crashlytics-build.properties

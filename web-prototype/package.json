@@ -1,0 +1,41 @@
+{
+  "name": "flowline",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Flowline - a road network traffic simulation game",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "node scripts/smoke.mjs",
+    "desktop": "npm run build && electron .",
+    "desktop:smoke": "npm run build && FLOWLINE_SMOKE=1 electron .",
+    "dist:mac": "npm run build && electron-builder --mac --config electron-builder.json -c.directories.output=\"${FLOWLINE_RELEASE_DIR:-release}\"",
+    "dist:win": "npm run build && electron-builder --win --config electron-builder.json -c.directories.output=\"${FLOWLINE_RELEASE_DIR:-release}\"",
+    "dist:linux": "npm run build && electron-builder --linux --config electron-builder.json -c.directories.output=\"${FLOWLINE_RELEASE_DIR:-release}\""
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "three": "^0.186.1",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "electron": "^44.7.0",
+    "electron-builder": "^26.15.3",
+    "playwright": "^1.64.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^4.1.11"
+  },
+  "main": "electron/main.cjs",
+  "author": "Flowline"
+}

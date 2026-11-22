@@ -1,0 +1,9 @@
+{
+  "appId": "app.flowline.game",
+  "productName": "Flowline",
+  "directories": { "output": "release" },
+  "files": ["dist/**/*", "electron/**/*", "package.json"],
+  "mac": { "category": "public.app-category.simulation-games", "target": ["dir"] },
+  "win": { "target": ["dir"] },
+  "linux": { "target": ["dir"], "category": "Game" }
+}
